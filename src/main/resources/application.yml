@@ -1,6 +1,6 @@
 micronaut:
   application:
-    name: distributed-app
+    name: backend_app
   swagger:
     enabled: true
     endpoints:
@@ -9,12 +9,12 @@ micronaut:
 server:
   port: ${SERVER_PORT:8080}
   cors:
-    enabled: true  # Habilitar CORS para todas las rutas
+    enabled: true
     mappings:
       "/**":
-        allowedOrigins: "*"  # Permite solicitudes desde cualquier origen
-        allowedMethods: "GET, POST, PUT, DELETE"  # Métodos permitidos
-        allowedHeaders: "*"  # Todos los encabezados permitidos
+        allowedOrigins: "*"  
+        allowedMethods: "GET, POST, PUT, DELETE"  
+        allowedHeaders: "*"
 
 
 
