@@ -1,0 +1,20 @@
+micronaut:
+  application:
+    name: distributed-app
+  swagger:
+    enabled: true
+    endpoints:
+      path: /swagger
+
+server:
+  port: ${SERVER_PORT:8080}
+  cors:
+    enabled: true  # Habilitar CORS para todas las rutas
+    mappings:
+      "/**":
+        allowedOrigins: "*"  # Permite solicitudes desde cualquier origen
+        allowedMethods: "GET, POST, PUT, DELETE"  # Métodos permitidos
+        allowedHeaders: "*"  # Todos los encabezados permitidos
+
+
+

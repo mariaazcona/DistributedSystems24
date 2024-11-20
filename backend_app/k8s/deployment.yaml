@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend-lab
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: backend-lab
+  template:
+    metadata:
+      labels:
+        app: backend-lab
+    spec:
+      containers:
+      - name: backend-lab
+        image: backend-lab:latest
+        ports:
+        - containerPort: 8080
+        env:
+        - name: PORT
+          value: "8080"
+
