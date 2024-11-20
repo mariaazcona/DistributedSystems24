@@ -1,6 +1,6 @@
 micronaut:
   application:
-    name: backend_app
+    name: backend-lab
   swagger:
     enabled: true
     endpoints:
