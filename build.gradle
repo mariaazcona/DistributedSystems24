@@ -18,53 +18,41 @@ micronaut {
 }
 
 dependencies {
-    // Procesadores de anotaciones
     annotationProcessor("io.micronaut:micronaut-http-validation")
     annotationProcessor("io.micronaut.data:micronaut-data-processor")
 
-    // Implementaciones básicas de Micronaut
     implementation("io.micronaut:micronaut-http-client")
     implementation("io.micronaut:micronaut-runtime")
 
-    // Base de datos y acceso a datos
     implementation("io.micronaut.data:micronaut-data-hibernate-jpa")
     implementation("io.micronaut.sql:micronaut-hibernate-jpa")
     implementation("io.micronaut.sql:micronaut-jdbc-hikari")
     implementation("io.micronaut:micronaut-jackson-databind")
 
 
-    // Logs
     runtimeOnly("ch.qos.logback:logback-classic")
 
-    // Migraciones de base de datos (opcional)
     implementation("io.micronaut.flyway:micronaut-flyway")
 
-    // Reactor (reactividad, opcional si usas programación reactiva)
     implementation("io.micronaut.reactor:micronaut-reactor")
     implementation("io.micronaut.reactor:micronaut-reactor-http-client")
 
-    // Base de datos (MySQL)
     runtimeOnly("mysql:mysql-connector-java")
     runtimeOnly("org.yaml:snakeyaml")
     
     implementation("io.micronaut.openapi:micronaut-openapi")
     annotationProcessor("io.micronaut.openapi:micronaut-openapi")
     
-    implementation("io.micronaut:micronaut-runtime")  // Dependencia principal de Micronaut
-    implementation("io.micronaut:micronaut-http-client")  // Para las APIs HTTP
-    implementation("io.micronaut.data:micronaut-data-hibernate-jpa")  // Si estás usando Hibernate/JPA
-    implementation("io.micronaut:micronaut-inject-java")  // Necesario para la inyección de dependencias (como @Inject)
-    implementation("javax.inject:javax.inject:1")  // Asegúrate de que esta dependencia esté incluida
-    runtimeOnly("ch.qos.logback:logback-classic")  // Logger para el proyecto
-    testImplementation("io.micronaut:micronaut-test-spock")  // Para pruebas en Spock
-    testImplementation("org.junit.jupiter:junit-jupiter-api")  // Para pruebas unitarias
-
-
-
+    implementation("io.micronaut:micronaut-runtime")  
+    implementation("io.micronaut:micronaut-http-client") 
+    implementation("io.micronaut.data:micronaut-data-hibernate-jpa")  
+    implementation("io.micronaut:micronaut-inject-java")  
+    implementation("javax.inject:javax.inject:1")  
+    runtimeOnly("ch.qos.logback:logback-classic") 
+    testImplementation("io.micronaut:micronaut-test-spock")  
+    testImplementation("org.junit.jupiter:junit-jupiter-api") 
 }
-
 
 application {
     mainClass.set("com.example.lab.Application")
 }
-
