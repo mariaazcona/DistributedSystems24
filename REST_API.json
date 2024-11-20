@@ -1,0 +1,25 @@
+{
+  "endpoints": [
+    {
+      "path": "/status",
+      "method": "GET",
+      "response": {
+        "status": 200,
+        "body": { "message": "Service is running" }
+      }
+    },
+    {
+      "path": "/users",
+      "method": "POST",
+      "requestBody": {
+        "name": "string",
+        "email": "string"
+      },
+      "response": {
+        "status": 201,
+        "body": { "id": "integer", "name": "string", "email": "string" }
+      }
+    }
+  ]
+}
+
