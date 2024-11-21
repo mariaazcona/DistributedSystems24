@@ -2,12 +2,12 @@
 
 Laboratory for Distributed Systems - by Maria Azcona
 
-This project uses Micronaut as the Backend Technology.
-Programs used:
-- **Java Development Kit (JDK) 17**.
-- **Gradle 8.8**.
-- **Git**.
-- **Docker** and **Docker Compose**
+Backend Technologies used for this project:
+- **Micronaut Framework**
+- **Gradle**
+- **Docker**
+- **Kubernetes**
+- **OpenAPI**
 
 ## HOW TO RUN
 
@@ -32,8 +32,25 @@ Application will we available in http://localhost:8080.
 
 ```
 curl http://localhost:8080/users
+curl -X GET http://localhost:8080/users
+
 curl http://localhost:8080/users/{id}
+curl -X GET http://localhost:8080/users/{id}
+
+curl -X POST http://localhost:8080/users \
+-H "Content-Type: application/json" \
+-d '{"name": "User1", "email": "user.sample@example.com"}'
 ```
+
+### Step 4: Deploy to Kubernetes
+
+Files can be found in the k8s/ folder. They include configurations for deployment and service.
+
+```
+kubectl apply -f kubernetes/deployment.yml
+kubectl apply -f kubernetes/service.yml
+```
+Access the Application through the exposed service.
 
 ### Optional step: Execute with Docker instead
 
