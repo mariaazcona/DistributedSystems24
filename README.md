@@ -6,7 +6,7 @@ Backend Technologies used for this project:
 - **Micronaut Framework**
 - **Gradle**
 - **Docker**
-- **Kubernetes**
+- **Kubernetes/Minikube**
 - **OpenAPI**
 
 ## HOW TO RUN
@@ -45,12 +45,16 @@ curl -X POST http://localhost:8080/users \
 ### Step 4: Deploy to Kubernetes
 
 Files can be found in the k8s/ folder. They include configurations for deployment and service.
-
 ```
+minikube start
+kubectl get nodes #to check if minikube is working
 kubectl apply -f kubernetes/deployment.yml
 kubectl apply -f kubernetes/service.yml
 ```
 Access the Application through the exposed service.
+```
+minikube service backend-app-service
+```
 
 ### Optional step: Execute with Docker instead
 
