@@ -11,17 +11,9 @@ Backend Technologies used for this project:
 
 ## HOW TO RUN
 
-### Step 1: Download or clone project
+### Step 1: Execute project
 
 ```
-git clone https://github.com/mariaazcona/backend_app.git
-```
-
-### Step 2: Execute project
-
-```
-cd backend_app
-
 ./gradlew clean shadowJar
 ./gradlew run
 ```
