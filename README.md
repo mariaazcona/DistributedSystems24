@@ -53,7 +53,7 @@ kubectl apply -f kubernetes/service.yml
 ```
 Access the Application through the exposed service.
 ```
-minikube service backend-app-service
+minikube service backend-lab
 ```
 
 ### Optional step: Execute with Docker instead
