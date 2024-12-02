@@ -18,9 +18,9 @@ Backend Technologies used for this project:
 ./gradlew run
 ```
 
-Application will we available in http://localhost:8080.
+Application will we available in the link provided by the terminal.
 
-### Step 3: Try endpoints
+### Step 2: Try endpoints
 
 ```
 curl http://localhost:8080/users
@@ -34,7 +34,7 @@ curl -X POST http://localhost:8080/users \
 -d '{"name": "User1", "email": "user.sample@example.com"}'
 ```
 
-### Step 4: Deploy to Kubernetes
+### Step 3: Deploy to Kubernetes  #still unfinished
 
 Files can be found in the k8s/ folder. They include configurations for deployment and service.
 ```
