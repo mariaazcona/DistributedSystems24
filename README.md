@@ -15,12 +15,12 @@ Backend Technologies used for this project:
 
 Java version must be upgraded to 17:
 ```
-/usr/lib/jvm/java-17-openjdk-amd64
 export JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
 export PATH=$JAVA_HOME/bin:$PATH
 ```
 Run gradlew on terminal:
 ```
+chmod +x gradlew
 ./gradlew clean shadowJar
 ./gradlew run
 ```
@@ -32,9 +32,6 @@ Application will we available in the link provided by the terminal.
 ```
 curl http://localhost:8080/users
 curl -X GET http://localhost:8080/users
-
-curl http://localhost:8080/users/{id}
-curl -X GET http://localhost:8080/users/{id}
 
 curl -X POST http://localhost:8080/users \
 -H "Content-Type: application/json" \
