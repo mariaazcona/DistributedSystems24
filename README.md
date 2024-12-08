@@ -1,18 +1,25 @@
 # BACKEND_APP
 
-Laboratory for Distributed Systems - by Maria Azcona
+Laboratory for Distributed Systems - by Maria Azcona & Petros Mouchtaropoulos
 
 Backend Technologies used for this project:
 - **Micronaut Framework**
 - **Gradle**
 - **Docker**
 - **Kubernetes/Minikube**
-- **OpenAPI**
+- **OpenAPI/Swagger**
 
 ## HOW TO RUN
 
-### Step 1: Execute project
+### Step 1: Execute project in codespace
 
+Java version must be upgraded to 17:
+```
+/usr/lib/jvm/java-17-openjdk-amd64
+export JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
+export PATH=$JAVA_HOME/bin:$PATH
+```
+Run gradlew on terminal:
 ```
 ./gradlew clean shadowJar
 ./gradlew run
@@ -20,7 +27,7 @@ Backend Technologies used for this project:
 
 Application will we available in the link provided by the terminal.
 
-### Step 2: Try endpoints
+### Step 2: Try endpoints #still unfinished
 
 ```
 curl http://localhost:8080/users
