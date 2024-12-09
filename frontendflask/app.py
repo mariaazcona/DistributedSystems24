@@ -11,7 +11,8 @@ logging.getLogger('requests').setLevel(logging.DEBUG)
 logging.getLogger('urllib3').setLevel(logging.DEBUG)
 
 # Get API URL from environment variable or use a default value
-API_URL = os.getenv("API_URL", "http://localhost:8080/api/shopping") # 12-factor style external config
+API_URL = os.getenv("API_URL", "http://localhost:8080")
+
 
 # Function to log requests with payload
 def log_request(request,response):
