@@ -18,11 +18,9 @@ Java version must be upgraded to 17:
 export JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
 export PATH=$JAVA_HOME/bin:$PATH
 ```
-Run gradlew on terminal:
+Docker-compose build and up:
 ```
-chmod +x gradlew
-./gradlew clean shadowJar
-./gradlew run
+docker-compose up --build
 ```
 
 Application will we available in the link provided by the terminal.
@@ -50,13 +48,6 @@ kubectl apply -f kubernetes/service.yml
 Access the Application through the exposed service.
 ```
 minikube service backend-lab
-```
-
-### Optional step: Execute with Docker instead
-
-```
-docker build -t backend_app .
-docker run -p 8080:8080 backend_app
 ```
 
 ## DOCUMENTATION
