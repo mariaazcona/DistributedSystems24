@@ -1,5 +1,14 @@
 version: "3.8"
 services:
+  shoppingdb: #will be hostname within docker network
+    image: postgres
+    environment:
+      POSTGRES_USER: hse24
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: shoppingdb
+    ports:
+      - "5432:5432"
+      
   backend:
     image: mariazcona/distributedsystems24-backend:latest  # Usa el nombre y etiqueta correctos de tu imagen
     ports:
